@@ -1,7 +1,9 @@
 body {
-  font: 12pt "Agent 'C'", "Helvetica Neue", sans-serif;
+  font: 12pt Gotham, "Helvetica Neue", Arial, Helvetica, sans-serif;
   background: white;
   color: black;
+  margin: 0;
+  padding: 1em;
 }
 
 h1 {
@@ -36,7 +38,10 @@ section span {
   position: relative;
   white-space: pre;
   padding-top: 1em;
-  min-width: 1.5em;
+}
+
+section span:empty {
+  min-width: 3em;
 }
 
 section span[title]:before {
@@ -137,3 +142,42 @@ aside {
 .chord span.fret-2:after { top: 18px; }
 .chord span.fret-3:after { top: 30px; }
 .chord span.fret-4:after { top: 42px; }
+
+/* Index */
+
+h1.fixed {
+  position: fixed;
+  left: 0;
+  top: 100%;
+  margin: 0;
+  padding: 0 0.25em;
+  font-size: 400%;
+  text-transform: uppercase;
+  -webkit-transform: rotate(-90deg);
+  -webkit-transform-origin: 0 0;
+  -moz-transform: rotate(90deg);
+  -moz-transform-origin: 0 0;
+}
+
+dl {
+  margin: 1em 1em 1em 5em;
+  padding: 0;
+  line-height: 1.5em;
+  vertical-align: middle;
+}
+
+dt {
+  margin: 1em 0 -1.5em 0;
+  padding: 0;
+  border-top: 1px solid #ccc;
+}
+
+dd {
+  margin: 0 0 0 10em;
+  padding: 0;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
