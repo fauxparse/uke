@@ -1,0 +1,139 @@
+body {
+  font: 12pt "Agent 'C'", "Helvetica Neue", sans-serif;
+  background: white;
+  color: black;
+}
+      
+h1 {
+  margin: 0;
+}
+      
+h2 {
+  margin: 0 0 1em;
+  font-weight: normal;
+  font-size: 100%;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5em;
+}
+    
+section {
+  clear: both;
+  margin-bottom: 1em;
+  overflow: auto;
+}
+      
+section[rel=chorus] {
+  font-weight: bold;
+}
+      
+section div {
+  clear: left;
+}
+      
+section span {
+  float: left;
+  position: relative;
+  white-space: pre;
+  padding-top: 1em;
+  min-width: 1.5em;
+}
+      
+section [data-chord]:before {
+  content: attr(data-chord);
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  color: red;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+      
+section .instrumental {
+  padding-top: 0;
+  height: 1em;
+  width: 4em;
+}
+      
+aside {
+  padding-top: 1em;
+}
+      
+.chord {
+  float: left;
+  margin: 0 2em 2em 0;
+  width: 34px;
+  height: 47px;
+  border-top: 3px solid black;
+  border-bottom: 1px solid black;
+  position: relative;
+  overflow: visible;
+}
+      
+.chord span:nth-child(1):before {
+  content: ' ';
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 33px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 11px;
+}
+
+.chord span:nth-child(2):before {
+  content: ' ';
+  position: absolute;
+  top: 35px;
+  left: -11px;
+  width: 33px;
+  border-top: 1px solid black;
+  height: 6px;
+}
+      
+.chord:after {
+  content: attr(title);
+  position: absolute;
+  left: -1em;
+  right: -1em;
+  bottom: -1.5em;
+  text-align: center;
+  color: red;
+}
+      
+.chord span {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid black;
+}
+      
+.chord span:nth-child(1) { left: 0; }
+.chord span:nth-child(2) { left: 11px; }
+.chord span:nth-child(3) { left: 22px; }
+.chord span:nth-child(4) { right: 0; }
+      
+.chord span:after {
+  content: ' ';
+  position: absolute;
+  margin: -5px;
+  left: 0px;
+  width: 9px;
+  height: 9px;
+  border-radius: 4.5px;
+  background: black;
+}
+      
+.chord span.open:after {
+  top: -9px;
+  background: white;
+  border: 1px solid black;
+  width: 7px;
+  height: 7px;
+}
+
+.chord span.fret-1:after { top: 6px; }
+.chord span.fret-2:after { top: 18px; }
+.chord span.fret-3:after { top: 30px; }
+.chord span.fret-4:after { top: 42px; }
