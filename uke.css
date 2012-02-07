@@ -3,11 +3,11 @@ body {
   background: white;
   color: black;
 }
-      
+
 h1 {
   margin: 0;
 }
-      
+
 h2 {
   margin: 0 0 1em;
   font-weight: normal;
@@ -16,21 +16,21 @@ h2 {
   border-bottom: 1px solid black;
   padding-bottom: 0.5em;
 }
-    
+
 section {
   clear: both;
   margin-bottom: 1em;
   overflow: auto;
 }
-      
+
 section[rel=chorus] {
   font-weight: bold;
 }
-      
+
 section div {
   clear: left;
 }
-      
+
 section span {
   float: left;
   position: relative;
@@ -38,9 +38,9 @@ section span {
   padding-top: 1em;
   min-width: 1.5em;
 }
-      
-section [data-chord]:before {
-  content: attr(data-chord);
+
+section span[title]:before {
+  content: attr(title);
   position: absolute;
   left: 0;
   top: 0.25em;
@@ -48,17 +48,17 @@ section [data-chord]:before {
   font-size: 0.8em;
   font-weight: normal;
 }
-      
+
 section .instrumental {
   padding-top: 0;
   height: 1em;
   width: 4em;
 }
-      
+
 aside {
   padding-top: 1em;
 }
-      
+
 .chord {
   float: left;
   margin: 0 2em 2em 0;
@@ -69,7 +69,7 @@ aside {
   position: relative;
   overflow: visible;
 }
-      
+
 .chord span:nth-child(1):before {
   content: ' ';
   position: absolute;
@@ -90,7 +90,7 @@ aside {
   border-top: 1px solid black;
   height: 6px;
 }
-      
+
 .chord:after {
   content: attr(title);
   position: absolute;
@@ -100,7 +100,7 @@ aside {
   text-align: center;
   color: red;
 }
-      
+
 .chord span {
   position: absolute;
   z-index: 2;
@@ -108,12 +108,12 @@ aside {
   bottom: 0;
   border-left: 1px solid black;
 }
-      
+
 .chord span:nth-child(1) { left: 0; }
 .chord span:nth-child(2) { left: 11px; }
 .chord span:nth-child(3) { left: 22px; }
 .chord span:nth-child(4) { right: 0; }
-      
+
 .chord span:after {
   content: ' ';
   position: absolute;
@@ -124,7 +124,7 @@ aside {
   border-radius: 4.5px;
   background: black;
 }
-      
+
 .chord span.open:after {
   top: -9px;
   background: white;
