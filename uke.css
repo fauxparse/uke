@@ -56,7 +56,7 @@ section span[title]:before {
 
 section .instrumental {
   padding-top: 0;
-  height: 1em;
+  height: 1.5em;
   width: 4em;
 }
 
@@ -73,6 +73,19 @@ aside {
   border-bottom: 1px solid black;
   position: relative;
   overflow: visible;
+}
+
+.chord[data-fret] {
+  margin-top: 2px;
+  border-top-width: 1px;
+}
+
+.chord[data-fret]:before {
+  content: attr(data-fret);
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  font-size: 0.7em;
 }
 
 .chord span:nth-child(1):before {
