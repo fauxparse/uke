@@ -29,6 +29,10 @@ section[rel=chorus] {
   font-weight: bold;
 }
 
+section[rel=bridge] {
+  font-style: italic;
+}
+
 section div {
   clear: left;
 }
